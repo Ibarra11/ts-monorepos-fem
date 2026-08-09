@@ -1,3 +1,6 @@
+packages:
+  - "packages/*"
+# “During installation, these packages are trusted and are allowed to execute their build/install scripts.”
 onlyBuiltDependencies:
   - '@tailwindcss/oxide'
   - esbuild

@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
-import { SeedPacketModel } from '../../src/models/seed-packet.model.js'
+import { SeedPacketModel } from '@seeds/models'
 
 // Mock global fetch for server tests
 global.fetch = vi.fn()
@@ -25,7 +25,7 @@ describe('Server API Tests', () => {
 			ok: true,
 			status: 200,
 			json: () => Promise.resolve(mockResponse),
-		} as Response)
+		})
 
 		const response = await fetch('http://localhost:3000/api/seeds')
 		const data = (await response.json()) as { seedPackets: SeedPacketModel[] }
@@ -42,7 +42,7 @@ describe('Server API Tests', () => {
 			ok: false,
 			status: 500,
 			statusText: 'Internal Server Error',
-		} as Response)
+		})
 
 		const response = await fetch('http://localhost:3000/api/seeds')
 

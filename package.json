@@ -5,7 +5,7 @@
 	"scripts": {
 		"build": "pnpm --color run -r build",
 		"dev": "pnpm --color run -r dev",
-		"format": "pnpm --color run -r format",
+		"format": "prettier --write packages/*/{src,tests}/**/*.ts packages/*/{tailwind.config.js,postcss.config.cjs,vite.config.ts,svelte.config.js}",
 		"test": "pnpm --color run -r test",
 		"check": "pnpm --color run -r check",
 		"lint": "pnpm --color run -r lint && pnpm --color manifests-lint",
@@ -16,7 +16,15 @@
 		"node": "22.16.0"
 	},
 	"devDependencies": {
+		"@eslint/js": "^9.28.0",
 		"@manypkg/cli": "^0.25.1",
-		"syncpack": "14.0.0-alpha.41"
+		"@types/node": "^24.0.0",
+		"eslint": "^9.28.0",
+		"knip": "^6.32.1",
+		"prettier": "^3.5.3",
+		"prettier-plugin-svelte": "^3.4.0",
+		"syncpack": "14.0.0-alpha.41",
+		"typescript": "~5.8.3",
+		"typescript-eslint": "^8.34.0"
 	}
 }

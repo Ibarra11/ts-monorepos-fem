@@ -16,7 +16,11 @@
 		"packages/**/src/**/*.svelte",
 		"packages/**/tests/**/*.ts",
 		"packages/**/tests/**/*.js",
-		"packages/**/tests/**/*.svelte"
+		"packages/**/tests/**/*.svelte",
+		"**/tailwind.config.js",
+		"**/postcss.config.cjs",
+		"**/vite.config.ts",
+		"**/svelte.config.js"
 	],
-	"exclude": ["**/assets/**/*", "node_modules", "dist"]
+	"exclude": ["**/assets/**/*", "node_modules"]
 }

@@ -8,8 +8,54 @@ importers:
 
   .: {}
 
+  packages/models:
+    dependencies:
+      cors:
+        specifier: ^2.8.5
+        version: 2.8.6
+      express:
+        specifier: ^5.1.0
+        version: 5.2.1
+      winston:
+        specifier: ^3.17.0
+        version: 3.19.0
+      yaml:
+        specifier: ^2.8.0
+        version: 2.9.0
+    devDependencies:
+      '@eslint/js':
+        specifier: ^9.28.0
+        version: 9.39.5
+      '@types/node':
+        specifier: ^24.0.0
+        version: 24.13.3
+      '@vitest/coverage-v8':
+        specifier: ^3.2.3
+        version: 3.2.7(vitest@3.2.7)
+      eslint:
+        specifier: ^9.28.0
+        version: 9.39.5
+      prettier:
+        specifier: ^3.5.3
+        version: 3.9.6
+      typescript:
+        specifier: ~5.8.3
+        version: 5.8.3
+      typescript-eslint:
+        specifier: ^8.34.0
+        version: 8.66.0(eslint@9.39.5)(typescript@5.8.3)
+      vite:
+        specifier: ^6.3.5
+        version: 6.4.3(@types/node@24.13.3)(sass-embedded@1.100.0)(tsx@4.23.11)(yaml@2.9.0)
+      vitest:
+        specifier: ^3.2.3
+        version: 3.2.7(@types/node@24.13.3)(@vitest/ui@3.2.7)(jsdom@26.1.0)(sass-embedded@1.100.0)(tsx@4.23.11)(yaml@2.9.0)
+
   packages/ui:
     dependencies:
+      '@seeds/models':
+        specifier: workspace:*
+        version: link:../models
       cors:
         specifier: ^2.8.5
         version: 2.8.6

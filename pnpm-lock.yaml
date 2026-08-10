@@ -11,6 +11,9 @@ importers:
       '@manypkg/cli':
         specifier: ^0.25.1
         version: 0.25.1
+      syncpack:
+        specifier: 14.0.0-alpha.41
+        version: 14.0.0-alpha.41
 
   packages/models:
     dependencies:
@@ -4424,6 +4427,85 @@ packages:
   /sync-message-port@1.2.0:
     resolution: {integrity: sha512-gAQ9qrUN/UCypHtGFbbe7Rc/f9bzO88IwrG8TDo/aMKAApKyD6E3W4Cm0EfhfBb6Z6SKt59tTCTfD+n1xmAvMg==}
     engines: {node: '>=16.0.0'}
+    dev: true
+
+  /syncpack-darwin-arm64@14.0.0-alpha.41:
+    resolution: {integrity: sha512-us5vwvzAQU9lVkoTAH9pTauaIYiebBWqazfWnqJmGqbwkZCSYPVpCyaSMRWBvrnXBe0u2slENKYbj7ihRDL+hw==}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /syncpack-darwin-x64@14.0.0-alpha.41:
+    resolution: {integrity: sha512-YJBDvHz/wToDHGyOHUWbk8XBE1yo+0C8xqzGdzt0C2uvvOkSsdWRSI9jRIuvg02NsG8FNhh9qSw+6dg7uHcItw==}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /syncpack-linux-arm64-musl@14.0.0-alpha.41:
+    resolution: {integrity: sha512-sZHr2bjLX4QnZed6tPQZUWGAEnXVHR9MZQNJVlrXK9YEXkMFtL6lCS3PW/xoerejoPg6NqoNzqEhHxN/oM9YgQ==}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /syncpack-linux-arm64@14.0.0-alpha.41:
+    resolution: {integrity: sha512-TANOn/WN9V/rsHDCddpXthrTT6P9Eash6RDK4IEmlNiaMLkJ9WsvNg5h0yvmpSdtt8Tnm8ZxHltyOH85mJ8vuw==}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /syncpack-linux-x64-musl@14.0.0-alpha.41:
+    resolution: {integrity: sha512-XNFX+D2sJZF9xpQXqChsyMumcED6cZhZGLISseQDZIPqjDN2oBOxY8/LMdd2uGozI5GpNE+FLSXr3r/P9K+J2w==}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /syncpack-linux-x64@14.0.0-alpha.41:
+    resolution: {integrity: sha512-5t7EJ7Y1VVAZngJgKn09pKJC3MNL7G2Sevhrm9wHFbohixUrZMMCydWdYCD27ZhziK5wHsTwoq5KLEolW+IKoA==}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /syncpack-windows-arm64@14.0.0-alpha.41:
+    resolution: {integrity: sha512-W2u6jwzmXx2N6Lg2qH6FrBX1RTA/BLVcS7kZtgcc009IRmrY7g+xj1zQUkJoe88Xdef6eR4lMTdEBje52091rA==}
+    cpu: [arm64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /syncpack-windows-x64@14.0.0-alpha.41:
+    resolution: {integrity: sha512-waW81Xl1+uRscAFFAiGBnNIBkOZL8U5ajWd9F70VGHvKwV/B/6WaD9z53oGu3qge2wIyQmVzhu6uFzXT4dUONQ==}
+    cpu: [x64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /syncpack@14.0.0-alpha.41:
+    resolution: {integrity: sha512-f21N5TpE7tpyoobmkrWZo5+YpFmqcDXrBUZMYcJ6F0V8pciuWslPBgpcIHeVDv1qqrcyjP1i3ovauif2ya7Clw==}
+    engines: {node: '>=14.17.0'}
+    hasBin: true
+    optionalDependencies:
+      syncpack-darwin-arm64: 14.0.0-alpha.41
+      syncpack-darwin-x64: 14.0.0-alpha.41
+      syncpack-linux-arm64: 14.0.0-alpha.41
+      syncpack-linux-arm64-musl: 14.0.0-alpha.41
+      syncpack-linux-x64: 14.0.0-alpha.41
+      syncpack-linux-x64-musl: 14.0.0-alpha.41
+      syncpack-windows-arm64: 14.0.0-alpha.41
+      syncpack-windows-x64: 14.0.0-alpha.41
     dev: true
 
   /tailwindcss@4.3.3:

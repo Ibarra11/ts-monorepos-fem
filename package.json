@@ -5,15 +5,18 @@
 	"scripts": {
 		"build": "pnpm --color run -r build",
 		"dev": "pnpm --color run -r dev",
-		"lint": "pnpm --color run -r lint",
 		"format": "pnpm --color run -r format",
 		"test": "pnpm --color run -r test",
-		"check": "pnpm --color run -r check"
+		"check": "pnpm --color run -r check",
+		"lint": "pnpm --color run -r lint && pnpm --color manifests-lint",
+		"manifests-lint": "pnpm manypkg check",
+		"manifests-fix": "pnpm manypkg fix"
 	},
 	"volta": {
 		"node": "22.16.0"
 	},
 	"devDependencies": {
-		"@manypkg/cli": "^0.25.1"
+		"@manypkg/cli": "^0.25.1",
+		"syncpack": "14.0.0-alpha.41"
 	}
 }

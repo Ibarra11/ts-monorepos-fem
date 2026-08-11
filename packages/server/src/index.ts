@@ -5,7 +5,7 @@ async function main() {
 	const { app, cfg } = initApp()
 
 	app.listen(cfg.port, () => {
-		console.log(`Server listening on port http://localhost:${cfg.port}`)
+		console.log(`Server listening on http://localhost:${cfg.port}`)
 	})
 }
 

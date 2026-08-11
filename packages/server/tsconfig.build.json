@@ -7,5 +7,10 @@
 		"rootDir": "src",
 		"declaration": true,
 		"composite": true
-	}
+	},
+	"references": [
+		{
+			"path": "../models/tsconfig.build.json"
+		}
+	]
 }

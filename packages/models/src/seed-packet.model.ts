@@ -11,7 +11,9 @@
  * - Succession Planting: Planting the same crop multiple times for continuous harvest
  * - Hardiness Zone: Geographic regions based on average minimum winter temperatures
  */
-
+/**
+ * @alpha
+ */
 export type DateTime = string // ISO 8601
 
 // ============================================================================
@@ -30,6 +32,9 @@ enum TemperatureUnit {
 	celsius = 'celsius',
 }
 
+/**
+ * @internal
+ */
 type RawDistanceUnit = 'inches' | 'feet' | 'yards' | 'meters' | 'centimeters'
 
 export interface Distance {
@@ -315,6 +320,10 @@ enum SoilTexture {
 /**
  * How quickly water moves through soil - affects plant health and watering
  */
+
+/**
+ * @beta
+ */
 enum DrainagePreference {
 	wellDraining = 'well-draining', // Water moves through quickly
 	moistureRetentive = 'moisture-retentive', // Holds water longer
@@ -454,6 +463,10 @@ enum SeedTreatment {
 /**
  * All spacing requirements for optimal plant growth and garden layout
  */
+
+/**
+ * @internal
+ */
 interface PlantSpacing {
 	minimum: Distance // Closest plants can be without competing
 	optimal: Distance // Best spacing for healthy growth
@@ -571,6 +584,9 @@ interface PlantFunctions {
 }
 
 /**
+ * @beta
+ */
+/**
  * Companion planting relationships - which plants help or hurt each other
  */
 interface CompanionPlanting {
@@ -581,6 +597,7 @@ interface CompanionPlanting {
 
 /**
  * Information specific to seed packets (not live plants)
+ * @beta
  */
 export interface SeedPacketInfo {
 	seedCount?: number // Number of seeds in packet
@@ -659,6 +676,10 @@ interface ToxicityInfo {
 		toxicParts?: PlantPart[]
 	}
 
+	alienToxicity?: {
+		toxicParts?: PlantPart[]
+	}
+
 	// Contact safety
 	skinContact?: {
 		irritant?: boolean // Causes skin irritation
@@ -695,6 +716,7 @@ interface SeedPacketPresentation {
  *
  * Not all fields will be available for every plant - optional sections
  * allow for incomplete data while still being useful for garden planning.
+ * @alpha
  */
 export interface SeedPacketModel {
 	// ========================================================================

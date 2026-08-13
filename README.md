@@ -19,22 +19,27 @@ cd ts-monorepos-v2
 
 ### 2. Node Version Management
 
-This project uses Node.js version 22.16.0. 
+This project uses Node.js version 22.16.0.
 
 #### Volta
+
 Volta is a great tool for managing node versions across different projects. Get it at [https://volta.sh](volta.sh)
 
 You can install volta in any POSIX-compliant operating system that supports `curl` by running
+
 ```sh
 curl https://get.volta.sh | bash
 ```
+
 You may need to close and reopen your terminal before your can verify that your environment has volta installed
+
 ```sh
 volta --version
-> 2.0.2 
+> 2.0.2
 ```
 
 #### Nvm
+
 If you have `nvm` (Node Version Manager) installed, you can automatically use the correct version:
 
 ```bash
@@ -42,12 +47,15 @@ nvm use
 ```
 
 ### 3. Install `pnpm` if you don't have it already
+
 Make sure you have [`pnpm`](https://pnpm.io/) installed.
 
 If you use `volta` you can just run
+
 ```sh
 volta install pnpm
 ```
+
 Alternatively you can follow [`pnpm`'s direct installation instructions](https://pnpm.io/installation)
 
 ### 3. Install Dependencies
@@ -71,8 +79,9 @@ pnpm run test       # Test the project
 ```sh
 pnpm run dev
 ```
-* You should be able to go to http://localhost:3000/api/seeds in a browser and see some JSON
-* You should be able to go to http://localhost:5173/ and see a UI that looks like this
+
+- You should be able to go to http://localhost:3000/api/seeds in a browser and see some JSON
+- You should be able to go to http://localhost:5173/ and see a UI that looks like this
 
 ## Available Scripts
 
@@ -147,16 +156,19 @@ ts-monorepos-v2/
 ## Getting Started with Development
 
 1. **Start the development environment**:
+
    ```bash
    pnpm run dev
    ```
 
 2. **Run tests**:
+
    ```bash
    pnpm run test
    ```
 
 3. **Check code quality**:
+
    ```bash
    pnpm run lint
    pnpm run check

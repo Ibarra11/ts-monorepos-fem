@@ -1,0 +1,57 @@
+{
+	"$schema": "./node_modules/nx/schemas/nx-schema.json",
+	"targetDefaults": {
+		"test": {
+			"cache": true,
+			"dependsOn": ["^test"]
+		},
+		"build": {
+			"outputs": ["{projectRoot}/dist"],
+			"cache": true
+		},
+		"test:coverage": {
+			"outputs": ["{projectRoot}/coverage"],
+			"cache": true
+		},
+		"lint": {
+			"cache": true
+		},
+		"check": {
+			"cache": true
+		},
+		"format": {
+			"cache": true
+		}
+	},
+	"analytics": true,
+	"plugins": [
+		{
+			"plugin": "@nx/eslint/plugin",
+			"options": {
+				"targetName": "eslint:lint"
+			}
+		},
+		{
+			"plugin": "@nx/vitest",
+			"options": {
+				"testTargetName": "vitest:test",
+				"ciTargetName": "test-ci",
+				"testMode": "watch"
+			}
+		},
+		{
+			"plugin": "@nx/vite/plugin",
+			"options": {
+				"buildTargetName": "vite:build",
+				"serveTargetName": "serve",
+				"devTargetName": "vite:dev",
+				"previewTargetName": "vite:preview",
+				"serveStaticTargetName": "serve-static",
+				"typecheckTargetName": "typecheck",
+				"buildDepsTargetName": "build-deps",
+				"watchDepsTargetName": "watch-deps"
+			}
+		}
+	],
+	"nxCloudId": "6a7e2c8b4a14569452843fd7"
+}

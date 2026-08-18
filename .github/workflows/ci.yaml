@@ -17,7 +17,7 @@ permissions:
   contents: read
 
 jobs:
-  validate:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -27,7 +27,6 @@ jobs:
       - name: Setup pnpm and Node
         uses: pnpm/setup@v1
         with:
-          version: 11
           runtime: node@22
           cache: true
 

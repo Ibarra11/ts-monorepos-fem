@@ -1,5 +1,7 @@
 {
 	"workspaces": {
+// project = What files belong to my project?
+// entry   = Where should Knip start tracing what's actually used?
 		"packages/*": {
 			"entry": ["src/{index,main}.ts"],
 			"project": ["src/**/*.{ts,tsx,svelte}"]
